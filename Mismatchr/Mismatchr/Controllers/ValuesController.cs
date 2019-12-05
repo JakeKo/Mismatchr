@@ -12,9 +12,9 @@ namespace Mismatchr.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public List<AppPermissions> Get()
         {
-            return new string[] { "value1", "value2" };
+            return ParseXML.getAllAppsPermissions();
         }
 
         // GET api/values/5
