@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application>
+    <packageName>net.micode.compass</packageName>
+    <components>
+        <Component>
+            <type>activity</type>
+            <name>net.micode.compass.CompassActivity</name>
+            <RequiredPermissions/>
+            <IntentFilter>
+                <filter>
+                    <actions>android.intent.action.MAIN</actions>
+                    <actions>android.intent.action.MAIN</actions>
+                    <categories>android.intent.category.DEFAULT</categories>
+                    <categories>android.intent.category.LAUNCHER</categories>
+                    <pathData></pathData>
+                </filter>
+                <filter>
+                    <actions>android.intent.action.MAIN</actions>
+                    <actions>android.intent.action.MAIN</actions>
+                    <categories>android.intent.category.DEFAULT</categories>
+                    <categories>android.intent.category.LAUNCHER</categories>
+                    <pathData></pathData>
+                </filter>
+            </IntentFilter>
+            <PropagatedPermissions/>
+            <sensitiveFlows>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 98 </sink>
+                    <sinkCalledAt>net.micode.compass.CompassActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r4.&lt;android.hardware.SensorManager: android.hardware.Sensor getDefaultSensor(int)&gt;(3) </source>
+                    <sourceCalledAt>net.micode.compass.CompassActivity: void initServices()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 98 </sink>
+                    <sinkCalledAt>net.micode.compass.CompassActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r6.&lt;android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)&gt;($r1, 1) </source>
+                    <sourceCalledAt>net.micode.compass.CompassActivity: void initServices()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>LOCATION_INFORMATION</sourceDomain>
+                </Flow>
+            </sensitiveFlows>
+        </Component>
+    </components>
+    <newIntents/>
+    <ContentProviders/>
+    <usesPermissions>
+        <permission>VIBRATE</permission>
+        <permission>ACCESS_FINE_LOCATION</permission>
+    </usesPermissions>
+    <actuallyUsesPermissions>
+        <permission>ACCESS_FINE_LOCATION</permission>
+    </actuallyUsesPermissions>
+    <requiredPermissions/>
+    <apkFile>../../../app_repo/compass/net.micode.compass_1.apk</apkFile>
+    <name>net_micode_compass_1</name>
+</application>
