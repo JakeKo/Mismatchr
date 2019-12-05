@@ -13,6 +13,13 @@ namespace Mismatchr
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(filepath);
+            List<string> fakeperms = new List<string>();
+            XmlNode topnode = doc.DocumentElement.SelectSingleNode("usesPermissions");
+            foreach (XmlNode node1 in topnode.ChildNodes)
+            {
+                fakeperms.Add(node1.InnerText);
+            }
+
             List<string> perms = new List<string>();
             XmlNode node = doc.DocumentElement.SelectSingleNode("actuallyUsesPermissions");
             foreach (XmlNode node1 in node.ChildNodes)
@@ -21,7 +28,8 @@ namespace Mismatchr
             }
             var app = new AppPermissions();
             app.Name = filepath.Substring(15);
-            app.Permissions = perms;
+            app.actuallyUsesPermissions = perms;
+            app.declaresPermissions = fakeperms;
             return app;
         }
 
