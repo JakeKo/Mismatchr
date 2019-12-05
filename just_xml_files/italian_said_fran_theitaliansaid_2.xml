@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application>
+    <packageName>italian.said.fran.theitaliansaid</packageName>
+    <components>
+        <Component>
+            <type>activity</type>
+            <name>italian.said.fran.theitaliansaid.MainActivity</name>
+            <RequiredPermissions/>
+            <IntentFilter>
+                <filter>
+                    <actions>android.intent.action.MAIN</actions>
+                    <categories>android.intent.category.LAUNCHER</categories>
+                    <pathData></pathData>
+                </filter>
+            </IntentFilter>
+            <PropagatedPermissions/>
+        </Component>
+        <Component>
+            <type>activity</type>
+            <name>italian.said.fran.theitaliansaid.FavActivity</name>
+            <RequiredPermissions/>
+            <IntentFilter/>
+            <PropagatedPermissions/>
+        </Component>
+    </components>
+    <newIntents>
+        <Intent>
+            <calledAt>italian.said.fran.theitaliansaid.MainActivity: void openFav()</calledAt>
+            <sender>italian.said.fran.theitaliansaid.MainActivity</sender>
+            <component>italian.said.fran.theitaliansaid.FavActivity</component>
+            <action></action>
+            <dataType></dataType>
+            <scheme></scheme>
+            <extra>false</extra>
+            <sensitiveData>false</sensitiveData>
+            <consumerMethod>startActivity</consumerMethod>
+            <id>frsjnpl2mvtiknhlj3bt1k7dcb</id>
+            <random/>
+        </Intent>
+        <Intent>
+            <calledAt>italian.said.fran.theitaliansaid.MainActivity: void openFav()</calledAt>
+            <sender>italian.said.fran.theitaliansaid.MainActivity</sender>
+            <component>italian.said.fran.theitaliansaid.FavActivity</component>
+            <action></action>
+            <dataType></dataType>
+            <scheme></scheme>
+            <extra>false</extra>
+            <sensitiveData>false</sensitiveData>
+            <consumerMethod>startActivity</consumerMethod>
+            <id>49qpt68a24n7rqnuvlcl9lk0a3</id>
+            <random/>
+        </Intent>
+        <Intent>
+            <calledAt>italian.said.fran.theitaliansaid.MainActivity: void openFav()</calledAt>
+            <sender>italian.said.fran.theitaliansaid.MainActivity</sender>
+            <component>italian.said.fran.theitaliansaid.FavActivity</component>
+            <action></action>
+            <dataType></dataType>
+            <scheme></scheme>
+            <extra>false</extra>
+            <sensitiveData>false</sensitiveData>
+            <consumerMethod>startActivity</consumerMethod>
+            <id>rsqf55r6934odi3ndq0ib855mg</id>
+            <random/>
+        </Intent>
+        <Intent>
+            <calledAt>italian.said.fran.theitaliansaid.MainActivity: void openFav()</calledAt>
+            <sender>italian.said.fran.theitaliansaid.MainActivity</sender>
+            <component>italian.said.fran.theitaliansaid.FavActivity</component>
+            <action></action>
+            <dataType></dataType>
+            <scheme></scheme>
+            <extra>false</extra>
+            <sensitiveData>false</sensitiveData>
+            <consumerMethod>startActivity</consumerMethod>
+            <id>5l0d8a5vb7j5utah9guuu604b4</id>
+            <random/>
+        </Intent>
+    </newIntents>
+    <ContentProviders/>
+    <usesPermissions/>
+    <actuallyUsesPermissions/>
+    <requiredPermissions/>
+    <apkFile>../../../app_repo/theitaliansaid/italian.said.fran.theitaliansaid_2.apk</apkFile>
+    <name>italian_said_fran_theitaliansaid_2</name>
+</application>

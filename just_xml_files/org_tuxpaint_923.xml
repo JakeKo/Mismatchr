@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application>
+    <packageName>org.tuxpaint</packageName>
+    <components>
+        <Component>
+            <type>activity</type>
+            <name>org.tuxpaint.tuxpaintActivity</name>
+            <RequiredPermissions/>
+            <IntentFilter>
+                <filter>
+                    <actions>android.intent.action.MAIN</actions>
+                    <categories>android.intent.category.LAUNCHER</categories>
+                    <pathData></pathData>
+                </filter>
+            </IntentFilter>
+            <PropagatedPermissions/>
+        </Component>
+        <Component>
+            <type>activity</type>
+            <name>org.tuxpaint.ConfigActivity</name>
+            <RequiredPermissions/>
+            <IntentFilter>
+                <filter>
+                    <actions>android.intent.action.MAIN</actions>
+                    <categories>android.intent.category.LAUNCHER</categories>
+                    <pathData></pathData>
+                </filter>
+            </IntentFilter>
+            <PropagatedPermissions/>
+            <sensitiveFlows>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("datadir", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("print", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r12.&lt;android.content.res.Resources: java.lang.String[] getStringArray(int)&gt;(2131034113) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("startblank", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("disablescreensaver", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("saveover", "ask") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r12.&lt;android.content.res.Resources: java.lang.String[] getStringArray(int)&gt;(2131034112) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("sound", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r6.&lt;android.content.res.Resources: android.content.res.AssetManager getAssets()&gt;() </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("autosave", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("printdelay", "0") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("locale", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;($r1) on line 63 </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("savedir", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("datadir", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("print", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("disablescreensaver", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("saveover", "ask") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("sound", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("autosave", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("printdelay", "0") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("locale", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.util.Log: int v(java.lang.String,java.lang.String)&gt;($r10, $r7) </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("savedir", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>LOG</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("datadir", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("print", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r12.&lt;android.content.res.Resources: java.lang.String[] getStringArray(int)&gt;(2131034113) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("startblank", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("disablescreensaver", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("saveover", "ask") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r12.&lt;android.content.res.Resources: java.lang.String[] getStringArray(int)&gt;(2131034112) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("sound", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r6.&lt;android.content.res.Resources: android.content.res.AssetManager getAssets()&gt;() </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("autosave", "no") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("printdelay", "0") </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("locale", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+                <Flow>
+                    <sink>&lt;android.content.res.AssetManager: java.io.InputStream open(java.lang.String)&gt;("etc/tuxpaint.cfg") </sink>
+                    <sinkCalledAt>org.tuxpaint.ConfigActivity: void load()</sinkCalledAt>
+                    <source> virtualinvoke $r9.&lt;java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)&gt;("savedir", $r7) </source>
+                    <sourceCalledAt>org.tuxpaint.ConfigActivity: void load()</sourceCalledAt>
+                    <sinkDomain>NO_CATEGORY</sinkDomain>
+                    <sourceDomain>NO_CATEGORY</sourceDomain>
+                </Flow>
+            </sensitiveFlows>
+        </Component>
+    </components>
+    <newIntents/>
+    <ContentProviders/>
+    <usesPermissions>
+        <permission>WRITE_EXTERNAL_STORAGE</permission>
+    </usesPermissions>
+    <actuallyUsesPermissions/>
+    <requiredPermissions/>
+    <apkFile>../../../app_repo/tuxpaint/org.tuxpaint_923.apk</apkFile>
+    <name>org_tuxpaint_923</name>
+</application>
