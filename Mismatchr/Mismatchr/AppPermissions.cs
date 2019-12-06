@@ -28,8 +28,8 @@ namespace Mismatchr
 
         public double getRisk()
         {
-            var check = declaredPermissions;
-            return Permission.getAllRisk(usedPermissions);
+            return Permission.getAllRisk(usedPermissions)
+                + 2 * Permission.getAllRisk(declaredPermissions.Where(x => usedPermissions.Contains(x)).ToList());
         }
     }
 }
