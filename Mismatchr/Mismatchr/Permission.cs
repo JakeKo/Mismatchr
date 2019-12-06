@@ -40,16 +40,16 @@ namespace Mismatchr
             {
                 switch (level)
                 {
-                    case "dangerous":
+                    case "dangerous;":
                         risk += 1;
                         break;
-                    case "signature":
+                    case "signature;":
                         risk += 0.5;
                         break;
-                    case "normal":
+                    case "normal;":
                         risk += 0.25;
                         break;
-                    case "priviliged":
+                    case "priviliged;":
                         risk -= 0.25;
                         break;
                     default:
