@@ -51,11 +51,11 @@ namespace Mismatchr
             switch (ProtectionLevel)
             {
                 case "dangerous":
-                    return 1;
+                    return 2 - (Flags.Length * 0.25);
                 case "signature":
-                    return 0.5;
+                    return 1 - (Flags.Length * 0.25);
                 case "normal":
-                    return 0.25;
+                    return 0.5 - (Flags.Length * 0.25);
                 default:
                     return 0;
             }
