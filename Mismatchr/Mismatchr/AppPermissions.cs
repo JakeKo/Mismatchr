@@ -26,6 +26,21 @@ namespace Mismatchr
             }
         }
 
+        public AppPermissions(string name, List<string> declaredPerm, List<string> usedPerm, List<Permission> defaultPermissions)
+        {
+            Name = name;
+            declaredPermissions = new List<Permission>();
+            usedPermissions = new List<Permission>();
+            foreach (string permission in declaredPerm)
+            {
+                declaredPermissions.Add(new Permission(permission, defaultPermissions));
+            }
+            foreach (string permission in usedPerm)
+            {
+                usedPermissions.Add(new Permission(permission, defaultPermissions));
+            }
+        }
+
         public double getRisk()
         {
             return Permission.getAllRisk(usedPermissions)

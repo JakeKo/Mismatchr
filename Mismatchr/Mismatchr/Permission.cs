@@ -5,7 +5,8 @@ namespace Mismatchr
     public class Permission
     {
         public string Name { get; set; }
-        public string[] ProtectionLevel { get; set; }
+        public string ProtectionLevel { get; set; }
+        public string[] Flags { get; set; }
 
         public static double getAllRisk(List<Permission> permissions)
         {
@@ -21,42 +22,43 @@ namespace Mismatchr
         {
             string[] split = line.Split(':');
             Name = split[0];
-            if (split[1] != null)
+            if (split.Length > 1)
             {
-                ProtectionLevel = split[1].Split(',');
+                ProtectionLevel = split[1].Split(',')[0];
+                Flags = split[1].Split(',');
             }
         }
 
-        public Permission(string name, string level)
+        public Permission(string line, List<Permission> defaults)
         {
-            Name = name;
-            ProtectionLevel = level.Split(',');
+            string[] split = line.Split(':');
+            Name = split[0];
+            if (split.Length > 1)
+            {
+                ProtectionLevel = split[1].Split(',')[0];
+                Flags = split[1].Split(',');
+            }
+            else
+            {
+                Permission defPerm = defaults.Find(x => x.Name == Name);
+                ProtectionLevel = defPerm.ProtectionLevel;
+                Flags = defPerm.Flags;
+            }
         }
 
         public double GetRisk()
         {
-            double risk = 0;
-            foreach( string level in ProtectionLevel)
+            switch (ProtectionLevel)
             {
-                switch (level)
-                {
-                    case "dangerous":
-                        risk += 1;
-                        break;
-                    case "signature":
-                        risk += 0.5;
-                        break;
-                    case "normal":
-                        risk += 0.25;
-                        break;
-                    case "priviliged":
-                        risk -= 0.25;
-                        break;
-                    default:
-                        break;
-                }
+                case "dangerous":
+                    return 1;
+                case "signature":
+                    return 0.5;
+                case "normal":
+                    return 0.25;
+                default:
+                    return 0;
             }
-            return risk;
         }
     }
 }
