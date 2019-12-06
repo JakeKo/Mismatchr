@@ -21,7 +21,7 @@ namespace Mismatchr
         {
             string[] split = line.Split(':');
             Name = split[0];
-            if (split[1] != null)
+            if (split.Length > 1)
             {
                 ProtectionLevel = split[1].Split(',');
             }
