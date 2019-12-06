@@ -26,7 +26,7 @@ namespace Mismatchr
             {
                 usedPerms.Add(node1.InnerText);
             }
-            var app = new AppPermissions(filepath.Substring(15), declaredPerms, usedPerms);
+            var app = new AppPermissions(filepath.Substring(15), declaredPerms, usedPerms, getDefaultPermissions());
             return app;
         }
 

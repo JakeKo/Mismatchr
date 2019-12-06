@@ -10,6 +10,7 @@ namespace Mismatchr
         public string Name { get; set; }
         public List<Permission> declaredPermissions;
         public List<Permission> usedPermissions;
+        public double Score;
 
         public AppPermissions(string name, List<string> declaredPerm, List<string> usedPerm)
         {
@@ -26,10 +27,27 @@ namespace Mismatchr
             }
         }
 
+        public AppPermissions(string name, List<string> declaredPerm, List<string> usedPerm, List<Permission> defaultPermissions)
+        {
+            Name = name;
+            declaredPermissions = new List<Permission>();
+            usedPermissions = new List<Permission>();
+            foreach (string permission in declaredPerm)
+            {
+                declaredPermissions.Add(new Permission(permission, defaultPermissions));
+            }
+            foreach (string permission in usedPerm)
+            {
+                usedPermissions.Add(new Permission(permission, defaultPermissions));
+            }
+
+            this.Score = getRisk();
+        }
+
         public double getRisk()
         {
             return Permission.getAllRisk(usedPermissions)
-                + 2 * Permission.getAllRisk(declaredPermissions.Where(x => usedPermissions.Contains(x)).ToList());
+                + 2 * Permission.getAllRisk(declaredPermissions.Where(x => !usedPermissions.Contains(x)).ToList());
         }
     }
 }
