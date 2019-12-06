@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Mismatchr
 {
@@ -25,7 +26,7 @@ namespace Mismatchr
             if (split.Length > 1)
             {
                 ProtectionLevel = split[1].Split(',')[0];
-                Flags = split[1].Split(',');
+                Flags = split[1].Split(',').Skip(1).ToArray();
             }
         }
 
