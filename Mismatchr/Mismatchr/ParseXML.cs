@@ -13,23 +13,20 @@ namespace Mismatchr
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(filepath);
-            List<string> fakeperms = new List<string>();
+            List<string> declaredPerms = new List<string>();
             XmlNode topnode = doc.DocumentElement.SelectSingleNode("usesPermissions");
             foreach (XmlNode node1 in topnode.ChildNodes)
             {
-                fakeperms.Add(node1.InnerText);
+                declaredPerms.Add(node1.InnerText);
             }
 
-            List<string> perms = new List<string>();
+            List<string> usedPerms = new List<string>();
             XmlNode node = doc.DocumentElement.SelectSingleNode("actuallyUsesPermissions");
             foreach (XmlNode node1 in node.ChildNodes)
             {
-                perms.Add(node1.InnerText);
+                usedPerms.Add(node1.InnerText);
             }
-            var app = new AppPermissions();
-            app.Name = filepath.Substring(15);
-            app.actuallyUsesPermissions = perms;
-            app.declaresPermissions = fakeperms;
+            var app = new AppPermissions(filepath.Substring(15), declaredPerms, usedPerms);
             return app;
         }
 
@@ -44,6 +41,16 @@ namespace Mismatchr
             }
 
             return permissions;
+        }
+
+        public static List<Permission> getDefaultPermissions()
+        {
+            List<Permission> defaults = new List<Permission>();
+            foreach (var line in File.ReadAllLines("permissions_list/DefaultPermissions.txt"))
+            {
+                defaults.Add(new Permission(line));
+            }
+            return defaults;
         }
     }
 }
