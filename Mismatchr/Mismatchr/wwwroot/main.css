@@ -1,2 +1,67 @@
-﻿body {
+﻿html, body {
+    margin: 0;
+    padding: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#title {
+    font-size: 64px;
+    font-weight: 600;
+    margin: 8px;
+}
+
+#subtitle {
+    margin: 8px 0;
+    font-size: 28px;
+}
+
+#analysis-preamble {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+#buttons {
+    margin: 8px 0;
+}
+
+#permission-display {
+    display: flex;
+}
+
+.permission-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.permission-column-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#permission-declarations {
+    margin-right: 48px;
+}
+
+.button {
+    border: none;
+    outline: none;
+    background: dodgerblue;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.app {
+    margin: 8px 0;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.high-risk {
+    background: tomato;
+}
+
+.low-risk {
+    background: lightgreen;
 }
