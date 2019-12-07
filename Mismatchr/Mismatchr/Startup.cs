@@ -40,6 +40,7 @@ namespace Mismatchr
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
